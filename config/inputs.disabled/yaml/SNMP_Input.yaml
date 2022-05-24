@@ -1,0 +1,9 @@
+input:
+   name         : Directory Name
+   cron         : "*/5 * * * *"
+   waitForFinish: true
+   onlyOnEvent  : true
+   exec         : |
+      var ret = {};
+      ret["test/test"] = { test: now() }
+      return ret;
